@@ -1,6 +1,10 @@
 .button {
-    background-color: green;
+    background-color: var(--color-primary);
+    color: var(--color-success);
+
     border: none;
+    padding: 5px 10px;
+    border-radius: var(--radius-md);
+
     cursor: pointer;
-    color: white;
 }
