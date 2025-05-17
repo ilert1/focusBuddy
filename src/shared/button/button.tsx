@@ -1,26 +1,38 @@
 "use client";
 
+import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { Button as AriaButton, ButtonProps } from "react-aria-components";
+import { ReactNode } from "react";
 import styles from "./button.module.scss";
 
 const buttonVariants = cva(styles.button, {
     variants: {
-        size: {
-            sm: styles.sm,
-            md: styles.md,
-        },
+        // size: {
+        //     sm: styles.sm,
+        //     md: styles.md,
+        // },
+        // defaultVariants: {
+        //     size: "md",
+        // },
     },
 });
 
-export interface ButtonProps
-    extends ButtonHTMLAttributes<HTMLButtonElement>,
+type AriaButtonTypes = ButtonProps & React.RefAttributes<HTMLButtonElement>;
+
+export interface IButtonProps
+    extends AriaButtonTypes,
         VariantProps<typeof buttonVariants> {
     children: ReactNode;
+    className?: string;
 }
 
-export const Button = (props: ButtonProps) => {
-    const { children, size } = props;
+export const Button = (props: IButtonProps) => {
+    const { children, className, ...otherProps } = props;
 
-    return <button className={buttonVariants({ size })}>{children}</button>;
+    return (
+        <AriaButton className={buttonVariants({ className })} {...otherProps}>
+            {children}
+        </AriaButton>
+    );
 };

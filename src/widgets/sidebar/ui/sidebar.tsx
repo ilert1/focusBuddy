@@ -16,7 +16,7 @@ export const Sidebar = () => {
         <aside
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed })}
         >
-            <Button size={"md"} onClick={toggleSidebar}>
+            <Button onClick={toggleSidebar} className={cls.button}>
                 {collapsed ? <ChevronRight /> : <ChevronLeft />}
             </Button>
 
