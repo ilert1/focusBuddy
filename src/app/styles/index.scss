@@ -1,0 +1,17 @@
+@use "variables/global";
+@use "themes/light";
+@use "themes/dark";
+@use "reset";
+
+.main_layout {
+    height: 100vh;
+    display: flex;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: red;
+    height: 100%;
+}
