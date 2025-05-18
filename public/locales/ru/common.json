@@ -1,4 +1,5 @@
 {
-    "welcome": "Привет",
-    "sidebar.title": "Меню"
+  "HomePage": {
+    "title": ""
+  }
 }

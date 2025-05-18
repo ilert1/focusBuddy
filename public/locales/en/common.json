@@ -1,4 +1,6 @@
 {
-    "welcome": "Welcome",
-    "sidebar.title": "Main Menu"
+  "HomePage": {
+    "Welcome": "HomePage.Welcome",
+    "title": "Title"
   }
+}
