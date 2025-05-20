@@ -3,6 +3,14 @@
 @use "themes/dark";
 @use "reset";
 
+.html {
+    font-size: 62.5%;
+ 
+    @media only screen and (max-width: 50em) { //800px
+        font-size: 50%;
+    }
+}
+
 .main_layout {
     height: 100vh;
     display: flex;

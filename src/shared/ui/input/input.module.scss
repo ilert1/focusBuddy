@@ -1,0 +1,20 @@
+.input {
+    margin: 30px;
+
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-bg-inverted);
+    border-radius: var(--radius-sm);
+
+    padding: 5px 10px;
+    outline: none;
+
+    &:hover {
+        transform: translate(1, -1);
+    }
+
+    &:focus {
+        border: 1px solid var(--color-primary-hover);
+    }
+}
+
